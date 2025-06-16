@@ -48,7 +48,6 @@ bool EventLoop                      (void);
 void EventLoop_Cleanup              (void);
 void Destroy_Window                 (void);
 
-
 #ifdef YOUR_PROJECT_NAME_IMPLEMENTATION
 
 // make separate ".c" files and just include them here

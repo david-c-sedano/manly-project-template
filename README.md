@@ -12,10 +12,13 @@ This is a nice middle ground if Raylib is too hand-holdy for you, but modern gra
 
 # Usage
 - Compile `nob.c` with your chosen C compiler
-    - example: `gcc nob.c -o build.exe`
+    - example: `gcc nob.c -o build.exe` or `cl nob.c /Fe:build.exe`
+    - If you are compiling to WASM just uncomment the line in `nob.c` and it doesn't matter which C compiler you use
+        - make sure `emcc` command works, of course
 - run the resuling `.exe` file
     - give it an extra `run` flag to run it automatically, like `./build.exe run`
+    - to run the "web application" if you are using emscripten, use `emrun --no_browser --port 8080 ./build/main.html`
 - final executable located in `./build` directory
 
 # Limitations
-Only works on Windows with MinGW or MSVC for now.
+Only works on Windows with MinGW or MSVC, as well as on browsers via WASM.
