@@ -5,3 +5,9 @@ build
 *.old
 *.pdb
 *.obj
+*.a
+*.lib
+*.o
+*.so
+*.dll
+*.rdbg
