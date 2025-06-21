@@ -13,7 +13,8 @@ MakeWindow (const char* window_title)
     START_TIME = RGFW_getTime();
     rlLoadExtensions(RGFW_getProcAddress);
     rlglInit(WINDOW_WIDTH, WINDOW_HEIGHT);
-    rlClearColor(255, 255, 255, 255);
+    rlOrtho(0, WINDOW_WIDTH, WINDOW_HEIGHT, 0, 0.0f, 1.0f); // set 0,0 as origin, use screen coordinates not whatever nonsense -1.0 to 1.0 system
+    rlClearColor(BACKGROUND_COLOR);
 }
 
 bool

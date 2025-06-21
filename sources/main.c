@@ -5,15 +5,13 @@ int
 main (void)
 {
     MakeWindow("real window");
+    FontRenderData font = Load_TTF(SELECTED_DEFAULT_FONT, 64.0);
+
     while (EventLoop())
     {
         rlClearScreenBuffers();
 
-        rlBegin(RL_TRIANGLES);
-        rlColor3f(1.0f, 0.0f, 0.0f); rlVertex2f(-0.6f, -0.75f);
-        rlColor3f(0.0f, 1.0f, 0.0f); rlVertex2f(0.6f, -0.75f);
-        rlColor3f(0.0f, 0.0f, 1.0f); rlVertex2f(0.0f, 0.75f);
-        rlEnd();
+        DrawWords(font, "Hello World!", 100, 100, (RGBA){255, 255, 255, 255});
 
         EventLoop_Cleanup();
     }
